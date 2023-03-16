@@ -1,0 +1,10 @@
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(65, 82, 46, 0.05);
+	margin-right: 24px;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+}

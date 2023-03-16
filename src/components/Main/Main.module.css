@@ -1,0 +1,10 @@
+.bg {
+	background-color: #E5E5E5;
+	height: 100vh;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 15px;
+	margin: 0 auto;
+}

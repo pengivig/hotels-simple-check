@@ -1,0 +1,14 @@
+
+.like:hover path{
+	cursor: pointer;
+	fill: #EBEBEB;
+}
+
+.like__active {
+	cursor: pointer;
+}
+
+.like__active path {
+	fill: #E55858;
+	stroke: #E55858;
+}

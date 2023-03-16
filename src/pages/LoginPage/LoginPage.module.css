@@ -1,0 +1,31 @@
+.bg {
+	background-image: url('../../media/preBg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+}
+
+.container {
+	max-width: 1200px;
+	height: 100vh;
+	padding: 15px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	width: 409px;
+	border-radius: 16px;
+	padding: 32px;
+	background-color: #ffffff;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+	text-align: center;
+}
