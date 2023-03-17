@@ -1,0 +1,33 @@
+.flexbox__wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: hidden;
+	margin-bottom: 28px;
+	max-width: 600px;
+}
+
+.imgCard {
+	flex: 0 0 auto;
+}
+
+.favourites {
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.favourites__text{
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.favourites__count{
+	display: inline-block;
+}
+
+.number {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #41522E;
+}

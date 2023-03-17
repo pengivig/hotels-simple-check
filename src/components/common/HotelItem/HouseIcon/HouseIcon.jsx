@@ -1,8 +1,8 @@
 import s from './HouseIcon.module.css'
 
-const HouseIcon = () => {
+const HouseIcon = ({display}) => {
 	return (
-		<div className={s.icon}>
+		<div className={s.icon} style={{display: display}}>
 			<svg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'>
 				<g clip-path='url(#clip0_6_124)'>
 					<path

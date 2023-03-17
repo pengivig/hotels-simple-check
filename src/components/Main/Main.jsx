@@ -7,11 +7,13 @@ import s from './Main.module.css'
 const Main = () => {
 	return (
 		<div className={s.bg}>
-				<Header />
+			<Header />
 			<div className={s.container}>
-				<Search />
-				<Favourites />
-				{/* <HotelList /> */}
+				<div className={s.leftColumn}>
+					<Search />
+					<Favourites />
+				</div>
+				<HotelList />
 			</div>
 		</div>
 	)

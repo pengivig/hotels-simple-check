@@ -1,0 +1,26 @@
+.sorter {
+	position: relative;
+	line-height: 20px;
+	color: #99a0a3;
+	border: 1px solid #99a0a3;
+	border-radius: 4px;
+	padding: 4px 12px 4px 8px;
+	cursor: pointer;
+}
+
+.sorter span {
+	/* display: inline-block; */
+	margin-right: 9px;
+}
+
+.arrows{
+	position: absolute;
+	top: -1.5px;
+	right: 7.5px;
+}
+
+.arrowUp,
+.arrowDown {
+	height: 8.5px;
+	fill-opacity: 0.3;
+}

@@ -1,0 +1,20 @@
+.scrollWrapper {
+	height: 539px;
+	padding-right: 15px;
+	overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #E7E7E7;
+	border-radius: 2px;
+
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #41522E;
+	border-radius: 2px;
+}

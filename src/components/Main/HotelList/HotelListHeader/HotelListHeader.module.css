@@ -1,0 +1,31 @@
+span {
+	display: inline-block;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 28px;
+}
+
+.title {
+	width: 332px;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title__span:last-child {
+	width: 192px;
+}
+
+.date {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #41522e;
+}
