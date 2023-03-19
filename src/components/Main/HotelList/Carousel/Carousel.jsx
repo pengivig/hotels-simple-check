@@ -1,11 +1,12 @@
 import s from './Carousel.module.css'
-import img from '../../../../media/carouselImg1.jpg'
 import { useEffect, useRef } from 'react'
 
+import { doDeclination } from '../doDeclanation'
+import { useSelector } from 'react-redux'
+
 const Carousel = () => {
-	const count = 3
-	const doDeclination = (number, txt, cases = [2, 0, 1, 1, 1, 2]) =>
-		txt[number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]]
+
+	const count = useSelector(state => state.hotels.favs.length)
 
 	/* ----- Wheel scroll ----- */
 	let ref = useRef()
@@ -26,27 +27,16 @@ const Carousel = () => {
 		}
 	}, [])
 
+	const images = useSelector(state => state.hotels.images)
+
 	return (
 		<div className={s.wrapper}>
 			<div ref={ref} className={s.flexbox__wrapper}>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
-				<div className={s.imgCard}>
-					<img src={img} alt='#' />
-				</div>
+				{images.map((img, index) => (
+					<div key={index} className={s.imgCard}>
+						<img src={img} alt='#' />
+					</div>
+				))}
 			</div>
 			<div className={s.favourites}>
 				<span className={s.favourites__text}>Добавлено в Избранное:</span>

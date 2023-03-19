@@ -12,6 +12,7 @@
 	font-size: 17px;
 	font-weight: 300;
 	line-height: 22px;
+	display: inline-block;
 }
 
 .date {

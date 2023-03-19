@@ -1,8 +1,13 @@
+import moment from 'moment'
+import { useSelector } from 'react-redux'
 import s from './HotelListHeader.module.css'
+import 'moment/locale/ru'
 
 const HotelListHeader = () => {
-	const city = 'Москва'
-	const date = '07 июля 2020'
+	const { location, checkIn } = useSelector(state => state.hotels.reservationData)
+	moment.locale('ru')
+	const date = moment(checkIn).format('DD MMMM YYYY')
+	
 
 	return (
 		<div className={s.wrapper}>
@@ -12,17 +17,16 @@ const HotelListHeader = () => {
 					<path
 						d='M1 1.33334L9.66667 10L1 18.6667'
 						stroke='#A7A7A7'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
+						strokeWidth='2'
+						strokeLinecap='round'
+						strokeLinejoin='round'
 					/>
 				</svg>
-				<span className={s.title__span}>{city}</span>
+				<span className={s.title__span}>{location}</span>
 			</div>
-		<span className={s.date}>{date}</span>
+			<span className={s.date}>{date}</span>
 		</div>
 	)
 }
-
 
 export default HotelListHeader

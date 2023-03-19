@@ -3,7 +3,7 @@ import s from './Button.module.css'
 const Button = ({ text }) => {
 	return (
 		<div>
-			<button className={s.btn}>{text}</button>
+			<input type='submit' value={text} className={s.input} />
 		</div>
 	)
 }
