@@ -8,8 +8,7 @@ import { login } from '../../redux/slices/authSlice'
 
 const Login = () => {
 	const dispatch = useDispatch()
-	// const isAuth = localStorage.getItem('isAuth')
-	// const navigate = useNavigate()
+	
 
 	const onSubmit = () => {
 		dispatch(login())

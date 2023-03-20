@@ -14,7 +14,7 @@ function App() {
 	return (
 		<div className={s.app}>
 			<Routes >
-				<Route path='/hotels-simple-check/*' element={<NotFound />} />
+				<Route path='/hotels-simple-check/*' element={ <PrivateRoute><NotFound /></PrivateRoute>} />
 				<Route path='/hotels-simple-check' element={<PrivateRoute><MainPage /></PrivateRoute>} />
 				<Route path='/hotels-simple-check/login' element={<LoginPage />} />
 			</Routes>
