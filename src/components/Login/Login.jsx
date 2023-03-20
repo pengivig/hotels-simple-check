@@ -8,14 +8,12 @@ import { login } from '../../redux/slices/authSlice'
 
 const Login = () => {
 	const dispatch = useDispatch()
-	const isAuth = localStorage.getItem('isAuth')
-	const navigate = useNavigate()
+	// const isAuth = localStorage.getItem('isAuth')
+	// const navigate = useNavigate()
 
-	useEffect(() => {
-		if(isAuth){
-			navigate('/hotels-simple-check')
-		}
-	}, [isAuth])
+	const onSubmit = () => {
+		dispatch(login())
+	}
 
 
 	const {
@@ -24,12 +22,8 @@ const Login = () => {
 		handleSubmit,
 	} = useForm()
 
-	const onSubmit = () => {
-		dispatch(login())
-	}
-
 	
-
+	
 	return (
 		<div>
 			<form onSubmit={handleSubmit(onSubmit)} >
