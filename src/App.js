@@ -7,16 +7,16 @@ import NotFound from './pages/NotFound/NotFoundPage'
 
 const PrivateRoute = ({ children }) => {
 	const auth = localStorage.getItem('isAuth')
-	return auth ? children : <Navigate to='/hotels-simple-check/login' replace/>
+	return auth ? children : <Navigate to='/login' replace/>
 }
 
 function App() {
 	return (
 		<div className={s.app}>
 			<Routes >
-				<Route path='/hotels-simple-check/*' element={ <PrivateRoute><NotFound /></PrivateRoute>} />
-				<Route path='/hotels-simple-check' element={<PrivateRoute><MainPage /></PrivateRoute>} />
-				<Route path='/hotels-simple-check/login' element={<LoginPage />} />
+				<Route path='/*' element={ <PrivateRoute><NotFound /></PrivateRoute>} />
+				<Route exact path='/' element={<PrivateRoute><MainPage /></PrivateRoute>} />
+				<Route exact path='/login' element={<LoginPage />} />
 			</Routes>
 		</div>
 	)

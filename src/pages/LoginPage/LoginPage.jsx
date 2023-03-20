@@ -11,7 +11,7 @@ const LoginPage = () => {
 
 		useEffect(() => {
 		if(isAuth){
-			navigate('/hotels-simple-check')
+			navigate('/')
 		}
 	}, [isAuth])
 
