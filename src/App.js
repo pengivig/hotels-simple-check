@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound/NotFoundPage'
 
 const PrivateRoute = ({ children }) => {
 	const auth = localStorage.getItem('isAuth')
-	return auth ? children : <Navigate to='/hotels-simple-check/login' />
+	return auth ? children : <Navigate to='/hotels-simple-check/login' replace/>
 }
 
 function App() {
