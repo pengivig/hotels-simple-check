@@ -9,12 +9,12 @@ const Logout = () => {
 	const isAuth = useSelector(state => state.auth.isAuth)
 	const navigate = useNavigate()
 
-	// useEffect(() => {
-	// 	if (!isAuth) {
-	// 		navigate('/hotels-simple-check/signIn')
-	// 		localStorage.clear()
-	// 	}
-	// }, [isAuth])
+	useEffect(() => {
+		if (!isAuth) {
+			navigate('/hotels-simple-check/')
+			localStorage.clear()
+		}
+	}, [isAuth])
 
 	const logoutHandler = () => {
 		dispatch(logout())
