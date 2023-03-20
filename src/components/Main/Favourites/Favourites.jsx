@@ -27,8 +27,8 @@ const Favourites = () => {
 						name={hotel.hotelName}
 						price={hotel.priceAvg}
 						rating={hotel.stars}
-						checkIn={checkIn}
-						period={period}
+						checkIn={hotel.checkIn}
+						period={hotel.period}
 						isActive={hotel.isFav}
 					/>
 				))}

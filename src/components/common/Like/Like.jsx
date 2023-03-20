@@ -10,12 +10,14 @@ const Like = ({ mb, id, isActive }) => {
 	const dispatch = useDispatch()
 
 	const onClick = () => {
-			const favHotel = hotels.find(hotel => hotel.hotelId === id)
-			if(!favHotel.isFav){
-				dispatch(setFavourites(favHotel))		
-			} else {
-				dispatch(removeFavourites(favHotel))
-			}
+		const favHotel = hotels.find(hotel => hotel.hotelId === id)
+		if (!favHotel.isFav) {
+			console.log(favHotel)
+			
+			dispatch(setFavourites(favHotel))
+		} else {
+			dispatch(removeFavourites(favHotel))
+		}
 	}
 
 	return (

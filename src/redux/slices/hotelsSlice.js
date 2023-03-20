@@ -31,7 +31,7 @@ export const hotelsSlice = createSlice({
 			state.error = null
 		},
 		getHotelsFulfilled: (state, action) => {
-			state.hotels = action.payload.map(hotel => ({ ...hotel, isFav: false }))
+			state.hotels = action.payload.map(hotel => ({ ...hotel, isFav: false, checkIn: null, period: null }))
 			state.isLoading = false
 			state.error = null
 		},
@@ -41,7 +41,12 @@ export const hotelsSlice = createSlice({
 		},
 		setFavourites: (state, action) => {
 			const index = state.hotels.findIndex(hotel => hotel.hotelId === action.payload.hotelId)
-			state.hotels[index] = { ...state.hotels[index], isFav: true }
+			state.hotels[index] = {
+				...state.hotels[index],
+				isFav: true,
+				checkIn: state.reservationData.checkIn,
+				period: state.reservationData.period,
+			}
 			state.favs = [...state.favs, state.hotels[index]]
 		},
 		removeFavourites: (state, action) => {
@@ -86,6 +91,6 @@ export const {
 	sortByPriceInAscendingOrder,
 	sortByPriceInDescendingOrder,
 	sortRatingAsc,
-	sortRatingDesc
+	sortRatingDesc,
 } = hotelsSlice.actions
 export default hotelsSlice.reducer
