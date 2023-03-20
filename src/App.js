@@ -7,10 +7,10 @@ function App() {
 	return (
 		<div className={s.app}>
 			<Routes>
-				<Route path='*' element={<Navigate to='/signIn' />} />
-				<Route path='/' element={<Navigate to='/signIn' />} />
-				<Route path='/signIn' element={<LoginPage />} />
-				<Route path='/main' element={<MainPage />} />
+				<Route path='/hotels-simple-check/' element={<Navigate to='/hotels-simple-check/signIn' />} />
+				<Route path='/hotels-simple-check' element={<Navigate to='/hotels-simple-check/signIn' />} />
+				<Route path='/hotels-simple-check/signIn' element={<LoginPage />} />
+				<Route path='/hotels-simple-check/main' element={<MainPage />} />
 			</Routes>
 		</div>
 	)

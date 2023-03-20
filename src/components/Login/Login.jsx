@@ -13,7 +13,7 @@ const Login = () => {
 
 	useEffect(() => {
 		if(isAuth){
-			navigate('/main')
+			navigate('/hotels-simple-check/main')
 		}
 		return
 	}, [isAuth])

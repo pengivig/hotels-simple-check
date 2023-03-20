@@ -11,7 +11,7 @@ const Logout = () => {
 
 	useEffect(() => {
 		if (!isAuth) {
-			navigate('/signIn')
+			navigate('/hotels-simple-check/signIn')
 			localStorage.clear()
 		}
 	}, [isAuth])
