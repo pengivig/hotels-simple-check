@@ -8,7 +8,7 @@ function App() {
 		<div className={s.app}>
 			<Routes>
 				<Route path='/hotels-simple-check/' element={<Navigate to='/hotels-simple-check/signIn' />} />
-				<Route path='/hotels-simple-check' element={<Navigate to='/hotels-simple-check/signIn' />} />
+				<Route path='/hotels-simple-check/signIn' element={<Navigate to='/hotels-simple-check/signIn' />} />
 				<Route path='/hotels-simple-check/signIn' element={<LoginPage />} />
 				<Route path='/hotels-simple-check/main' element={<MainPage />} />
 			</Routes>
