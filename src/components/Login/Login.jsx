@@ -16,7 +16,7 @@ const Login = () => {
 			navigate('/main')
 		}
 		return
-	}, isAuth)
+	}, [isAuth])
 
 	const {
 		register,
